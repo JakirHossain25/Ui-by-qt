@@ -1,11 +1,16 @@
-from PySide6.QtWidgets import QApplication, QWidget
+# first mathord #
 
+from PySide6.QtWidgets import QApplication ,QMainWindow,QPushButton
 import sys
 
-app = QApplication(sys.argv)
+app=QApplication(sys.argv)
+window = QMainWindow()
+window.setWindowTitle("This is a fist windo")
 
-window = QWidget()
+Button = QPushButton()
+Button.setText( "push Me")
+
+window.setCentralWidget(Button)
+
 window.show()
-
-
 app.exec()
