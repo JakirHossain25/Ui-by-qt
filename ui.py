@@ -1,30 +1,17 @@
-# first mathord #
-
-from PySide6.QtWidgets import QApplication ,QMainWindow,QPushButton
+# Import modules
 import sys
+from PyQt5.QtCore import Qt
+from PyQt5.QtWidgets import QApplication, QWidget, QLabel, QPushButton
 
-# app=QApplication(sys.argv)
-# window = QMainWindow()
-# window.setWindowTitle("This is a fist windo")
+# main app objects and settings
+App = QApplication(sys.argv)
 
-# Button = QPushButton()
-# Button.setText( "push Me")
+window = QWidget()
+window.setWindowTitle("This is class 1 UI part")
+window.resize(300, 200)
 
-# window.setCentralWidget(Button)
 
-# window.show()
-# app.exec()
 
-class ButtonHolder(QMainWindow):
-    def __init__(self):
-        super().__init__()
-        self.setWindowTitle("Button hold app")
-
-        button = QPushButton("press Me!")
-        self.setCentralWidget(button)
-        
-app=QApplication(sys.argv)
-
-window= ButtonHolder()
+# show and run
 window.show()
-app.exec()
+App.exec_()
